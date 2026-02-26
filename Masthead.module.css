@@ -1,0 +1,81 @@
+.masthead {
+  background: var(--paper);
+  border-bottom: 4px double var(--rule);
+  padding: 0.6rem 2rem 0;
+  text-align: center;
+}
+
+.editionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  border-bottom: 1px solid var(--light-rule);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--rule);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.35em;
+  color: var(--gray);
+  margin: 0.3rem 0 0.5rem;
+  font-weight: 300;
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0.3rem 0 0;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0 0.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.62rem;
+  color: var(--gray);
+}
+
+.updated { font-style: italic; }
+
+.updateBtn {
+  background: var(--rule);
+  color: var(--paper);
+  border: none;
+  padding: 0.4rem 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.updateBtn:hover:not(:disabled) { background: var(--accent); }
+.updateBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+@media (max-width: 640px) {
+  .masthead { padding: 0.6rem 1rem 0; }
+  .editionBar { flex-direction: column; gap: 0.2rem; text-align: center; }
+  .bottomBar { flex-direction: column; gap: 0.5rem; }
+  .title { font-size: 2.4rem; }
+}
